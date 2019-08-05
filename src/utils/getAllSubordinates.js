@@ -3,7 +3,7 @@ import flatten from "./flatten";
 
 const DIRECT_SUBORDINATES = "direct-subordinates";
 
-export const getAllSubordinates = async employee => {
+const getAllSubordinates = async employee => {
   return [...new Set(await getSubordinates([employee]))];
 };
 
@@ -32,3 +32,5 @@ const getSubordinates = async employees => {
   ];
   return subordinates.concat(await getSubordinates(subordinates));
 };
+
+export default getAllSubordinates;
