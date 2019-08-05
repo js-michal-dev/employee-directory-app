@@ -103,12 +103,12 @@ const Overview = ({ location, history }) => {
                 className={classes.subtitle}
                 color="textSecondary"
               >
-                {query} does not have any direct subordinates
+                {query} does not have any <br /> direct subordinates
               </Typography>
               <img
                 src={require("../images/empty.svg")}
                 alt="Error 404"
-                width="500"
+                width="400"
               />
             </div>
           )}
@@ -124,7 +124,7 @@ const Overview = ({ location, history }) => {
           <img
             src={require("../images/error.svg")}
             alt="Error 404"
-            width="500"
+            width="400"
           />
         </div>
       )}
