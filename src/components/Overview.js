@@ -43,7 +43,7 @@ const useStyles = makeStyles({
   }
 });
 
-const Overview = ({ location }) => {
+const Overview = ({ location, history }) => {
   const [state, setState] = useState({
     employees: [],
     loading: true,
@@ -53,7 +53,11 @@ const Overview = ({ location }) => {
   const { query } = getUrlParams(location);
 
   useEffect(() => {
-    getSubordinates(query);
+    if (!query) {
+      history.push("/");
+    } else {
+      getSubordinates(query);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query]);
 
