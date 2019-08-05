@@ -1,4 +1,5 @@
 import http from "../service/httpService";
+import flatten from "./flatten";
 
 const DIRECT_SUBORDINATES = "direct-subordinates";
 
