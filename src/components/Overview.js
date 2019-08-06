@@ -107,7 +107,7 @@ const Overview = ({ location, history }) => {
               </Typography>
               <img
                 src={require("../images/empty.svg")}
-                alt="Error 404"
+                alt="Empty"
                 width="400"
               />
             </div>
